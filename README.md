@@ -15,7 +15,7 @@ cd /var/www/
 ### 2. Download the script
 
 ```sh
-wget https://raw.githubusercontent.com/marounmelhem/laravel-permissions-fix/dev/perm_fix.sh
+wget https://raw.githubusercontent.com/tjsturos-vincit/laravel-permissions-fix/dev/perm_fix.sh
 ```
 
 ### 3. Configure default variables as per your server configuration:
@@ -37,4 +37,12 @@ chmod +x perm_fix.sh
 
 ```sh
 ./perm_fix.sh
+```
+
+```sh
+export LARAVEL_OWNER=vincit 
+export LARAVEL_WS_GROUP=www-data 
+export LARAVEL_ROOT=./
+wget -qO - https://raw.githubusercontent.com/tjsturos-vincit/laravel-permissions-fix.git/dev/perm_fix.sh | bash
+
 ```
