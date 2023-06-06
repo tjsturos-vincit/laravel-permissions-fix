@@ -1,7 +1,4 @@
-#Set variables here
-LARAVEL_OWNER=user # <-- owner (user)
-LARAVEL_WS_GROUP=www-data # <-- WebServer group
-LARAVEL_ROOT=/var/www/html # <-- Laravel root directory
+echo "Starting"
 
 # BEGIN Fix Laravel Permissions Script
 
@@ -24,3 +21,4 @@ sudo chgrp -R ${LARAVEL_WS_GROUP} ${LARAVEL_ROOT}/storage ${LARAVEL_ROOT}/bootst
 sudo chmod -R ug+rwx ${LARAVEL_ROOT}/storage ${LARAVEL_ROOT}/bootstrap/cache
 
 # END Fix Laravel Permissions Script
+echo "Finished"
